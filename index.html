@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ju Nakaba | Nutrição 40+ em Belo Horizonte</title>
+    <meta name="description"
+        content="Nutricionista em Belo Horizonte especializada em emagrecimento para mulheres 40+ e na menopausa. Pare de começar e parar, aprenda a emagrecer sem desistir.">
+    <meta name="keywords"
+        content="Nutricionista, Belo Horizonte, Emagrecimento, Mulheres 40+, Menopausa, Ju Nakaba, Nutrição">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome para Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Lora', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#1B3C35', // Verde profundo elegante
+                            light: '#F4F1EA', // Fundo areia/bege claro
+                            accent: '#C5A880', // Dourado/Areia escuro
+                            text: '#2D3748'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Ajuste fino para a imagem hero não quebrar layout */
+        .hero-img-clip {
+            clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+        }
+
+        @media (max-width: 768px) {
+            .hero-img-clip {
+                clip-path: none;
+            }
+        }
+
+        .whatsapp-float {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body class="font-sans text-brand-text bg-brand-light antialiased selection:bg-brand-dark selection:text-white">
+
+    <header class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="font-serif text-2xl font-semibold text-brand-dark tracking-tight">
+                        Ju Nakaba <span class="text-sm font-sans block text-gray-500 font-normal mt-1">Nutricionista</span>
+                    </a>
+                </div>
+
+                <!-- Menu Desktop -->
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="#inicio" class="text-gray-700 hover:text-brand-dark font-medium transition">Início</a>
+                    <a href="#sobre" class="text-gray-700 hover:text-brand-dark font-medium transition">Sobre Mim</a>
+                    <a href="#metodologia"
+                        class="text-gray-700 hover:text-brand-dark font-medium transition">Metodologia</a>
+                    <a href="#depoimentos"
+                        class="text-gray-700 hover:text-brand-dark font-medium transition">Pacientes</a>
+                    <a href="#contato" class="text-gray-700 hover:text-brand-dark font-medium transition">Contato</a>
+                    <a href="https://wa.me/5531999256643?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta."
+                        target="_blank"
+                        class="bg-brand-dark text-white px-6 py-2.5 rounded-full hover:bg-emerald-900 transition shadow-md font-medium">
+                        Agendar Consulta
+                    </a>
+                </nav>
+
+                <!-- Hamburger Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-brand-dark hover:text-emerald-800 focus:outline-none p-2">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col">
+                <a href="#inicio"
+                    class="mobile-link block px-3 py-3 text-base font-medium text-gray-800 hover:bg-brand-light rounded-md">Início</a>
+                <a href="#sobre"
+                    class="mobile-link block px-3 py-3 text-base font-medium text-gray-800 hover:bg-brand-light rounded-md">Sobre
+                    Mim</a>
+                <a href="#metodologia"
+                    class="mobile-link block px-3 py-3 text-base font-medium text-gray-800 hover:bg-brand-light rounded-md">Metodologia</a>
+                <a href="#depoimentos"
+                    class="mobile-link block px-3 py-3 text-base font-medium text-gray-800 hover:bg-brand-light rounded-md">Pacientes</a>
+                <a href="#contato"
+                    class="mobile-link block px-3 py-3 text-base font-medium text-gray-800 hover:bg-brand-light rounded-md">Contato</a>
+                <a href="https://wa.me/5531999256643" target="_blank"
+                    class="block w-full text-center mt-4 bg-brand-dark text-white px-5 py-3 rounded-md hover:bg-emerald-900 font-medium">
+                    Agendar Consulta
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="pt-28 pb-16 md:pt-32 md:pb-0 overflow-hidden relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col-reverse md:flex-row items-center gap-12">
+
+                    <!-- Text Content -->
+                    <div class="w-full md:w-1/2 flex flex-col justify-center text-center md:text-left pb-10 md:pb-20">
+                        <span
+                            class="text-brand-accent font-semibold tracking-wider uppercase text-sm mb-4 block">Nutrição
+                            Especializada</span>
+                        <h1
+                            class="font-serif text-4xl md:text-5xl lg:text-6xl font-medium text-brand-dark leading-tight mb-6">
+                            Emagrecimento para mulheres 40+ cansadas de começar e parar.
+                        </h1>
+                        <p class="text-lg text-gray-700 mb-8 max-w-lg mx-auto md:mx-0">
+                            Te ensino a emagrecer sem desistir, recuperando sua energia e autoestima, mesmo estando na
+                            menopausa. Chega de dietas restritivas que não funcionam para o seu metabolismo atual.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                            <a href="https://wa.me/5531999256643" target="_blank"
+                                class="bg-brand-dark text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-emerald-900 transition shadow-lg flex items-center justify-center gap-2">
+                                <i class="fab fa-whatsapp text-xl"></i> Falar com a Ju
+                            </a>
+                            <a href="#sobre"
+                                class="bg-white border-2 border-brand-dark text-brand-dark px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-50 transition flex items-center justify-center">
+                                Conhecer o Método
+                            </a>
+                        </div>
+
+                        <div
+                            class="mt-10 flex items-center justify-center md:justify-start gap-4 text-sm text-gray-600">
+                            <div class="flex -space-x-2">
+                                <!-- Estrelas Google -->
+                                <i class="fas fa-star text-yellow-400 text-lg"></i>
+                                <i class="fas fa-star text-yellow-400 text-lg"></i>
+                                <i class="fas fa-star text-yellow-400 text-lg"></i>
+                                <i class="fas fa-star text-yellow-400 text-lg"></i>
+                                <i class="fas fa-star text-yellow-400 text-lg"></i>
+                            </div>
+                            <span><strong class="text-brand-dark">5.0</strong> no Google</span>
+                        </div>
+                    </div>
+
+                    <!-- Image -->
+                    <div class="w-full md:w-1/2 relative">
+                        <!-- Imagem de Autoridade GMB -->
+                        <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAGOHBDytyqBHc9dvElSYZUT0paWSCSD0_9Z4ntINqF4vaJ3cOQnLAv7xbY7ruZZAq6RC2JK9rE279jUkN0BtylqXd7HjHDvcGG34Zf3oo9E7gvB7YcppeVep4mV3jwoZfinMN9h=w1600-h1200"
+                            alt="Ju Nakaba Nutricionista"
+                            class="w-full h-auto object-cover rounded-3xl md:rounded-none hero-img-clip shadow-2xl z-10 relative border-4 md:border-0 border-white">
+
+                        <!-- Elemento decorativo -->
+                        <div
+                            class="absolute -bottom-6 -left-6 w-48 h-48 bg-brand-accent/20 rounded-full blur-3xl -z-10">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white">
+            <div class="max-w-4xl mx-auto px-4 text-center">
+                <h2 class="font-serif text-3xl md:text-4xl text-brand-dark mb-10">Você se identifica com alguma destas
+                    situações?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-6 bg-brand-light rounded-2xl shadow-sm hover:shadow-md transition">
+                        <i class="fas fa-weight scale-x-[-1] text-3xl text-brand-accent mb-4"></i>
+                        <h3 class="font-bold text-xl mb-3 text-brand-dark">Metabolismo Lento</h3>
+                        <p class="text-gray-600 text-sm">Sente que após os 40 tudo o que você come parece virar gordura,
+                            mesmo comendo pouco?</p>
+                    </div>
+                    <div class="p-6 bg-brand-light rounded-2xl shadow-sm hover:shadow-md transition">
+                        <i class="fas fa-sync text-3xl text-brand-accent mb-4"></i>
+                        <h3 class="font-bold text-xl mb-3 text-brand-dark">Efeito Sanfona</h3>
+                        <p class="text-gray-600 text-sm">Começa uma dieta na segunda-feira, perde alguns quilos, mas
+                            logo desiste e recupera tudo?</p>
+                    </div>
+                    <div class="p-6 bg-brand-light rounded-2xl shadow-sm hover:shadow-md transition">
+                        <i class="fas fa-thermometer-half text-3xl text-brand-accent mb-4"></i>
+                        <h3 class="font-bold text-xl mb-3 text-brand-dark">Sintomas da Menopausa</h3>
+                        <p class="text-gray-600 text-sm">Cansaço, ondas de calor, alterações de humor e inchaço estão
+                            atrapalhando sua rotina?</p>
+                    </div>
+                </div>
+                <p class="mt-10 font-medium text-lg text-brand-dark">A culpa não é sua. As regras do emagrecimento mudam
+                    após os 40. E eu vou te mostrar o caminho.</p>
+            </div>
+        </section>
+
+        <section id="sobre" class="py-20 bg-brand-dark text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row items-center gap-16">
+
+                    <div class="w-full md:w-1/2 relative">
+                        <!-- Imagem GMB Autoridade 2 -->
+                        <div class="relative inline-block">
+                            <div class="absolute inset-0 bg-brand-accent translate-x-4 translate-y-4 rounded-2xl"></div>
+                            <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFE9f5lQeoMCl5tjpuNcWm79eAU_018HOK326hWhu9nLyLnRQgoju_J9Sqex6X9EtZv60vy2QPZHaRX5lA46C5by21jVSAE7fXtrsmFyF4vpknio2bkW09fU4-NkFBcxlZt8fWP=w1600-h1200"
+                                alt="Ju Nakaba em atendimento"
+                                class="relative z-10 rounded-2xl shadow-xl w-full object-cover aspect-[3/4] md:aspect-[4/5] object-[center_20%]">
+                        </div>
+                    </div>
+
+                    <div class="w-full md:w-1/2">
+                        <span class="text-brand-accent font-semibold tracking-wider uppercase text-sm mb-2 block">Muito
+                            Prazer,</span>
+                        <h2 class="font-serif text-4xl md:text-5xl mb-6">Sou Ju Nakaba</h2>
+                        <p class="text-gray-300 text-lg mb-6 leading-relaxed">
+                            Sou nutricionista dedicada exclusivamente a transformar a vida de mulheres acima dos 40
+                            anos. Entendo profundamente que o corpo da mulher passa por mudanças hormonais
+                            significativas nesta fase, especialmente na menopausa.
+                        </p>
+                        <p class="text-gray-300 text-lg mb-8 leading-relaxed">
+                            Meu propósito não é te entregar um papel com proibições. Meu trabalho vai além: eu te ensino
+                            a entender o seu corpo, a regular seus hormônios através da alimentação e a criar uma
+                            relação saudável com a comida. O verdadeiro Bem Nutrir.
+                        </p>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-brand-accent mt-1"></i>
+                                <span class="text-gray-200">Especialista em Emagrecimento Feminino 40+</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-brand-accent mt-1"></i>
+                                <span class="text-gray-200">Foco em regulação metabólica na menopausa</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-brand-accent mt-1"></i>
+                                <span class="text-gray-200">Abordagem comportamental: sem terrorismo nutricional</span>
+                            </li>
+                        </ul>
+                        <a href="https://www.instagram.com/ju.nakabanutri/" target="_blank"
+                            class="inline-flex items-center gap-2 text-white border border-white px-6 py-3 rounded-full hover:bg-white hover:text-brand-dark transition">
+                            <i class="fab fa-instagram text-xl"></i> Conheça meu dia a dia
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="metodologia" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row items-center gap-12">
+                    <div class="w-full lg:w-1/2 space-y-6">
+                        <span class="text-brand-accent font-semibold tracking-wider uppercase text-sm block">Aula
+                            Gratuita</span>
+                        <h2 class="font-serif text-3xl md:text-4xl text-brand-dark mb-4">O jeito certo de emagrecer sem
+                            desistir.</h2>
+                        <p class="text-lg text-gray-700">
+                            Nessa aula eu vou te mostrar um caminho possível e sustentável para emagrecer e manter.
+                        </p>
+                        <p class="text-gray-600 mb-6">
+                            O método que desenvolvi é baseado em 3 pilares que vão te tornar uma mulher mais leve e
+                            forte, capaz de sustentar o processo sem viver recomeçando.
+                        </p>
+                        <div class="bg-brand-light p-6 rounded-xl border-l-4 border-brand-accent">
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-3 text-gray-800 font-medium">
+                                    <i class="fas fa-check-circle text-brand-accent mt-1"></i> Emagrecimento com foco
+                                    sustentável
+                                </li>
+                                <li class="flex items-start gap-3 text-gray-800 font-medium">
+                                    <i class="fas fa-check-circle text-brand-accent mt-1"></i> Mais leveza e força no
+                                    processo
+                                </li>
+                                <li class="flex items-start gap-3 text-gray-800 font-medium">
+                                    <i class="fas fa-check-circle text-brand-accent mt-1"></i> Fim do ciclo de recomeços
+                                    infinitos
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="w-full lg:w-1/2">
+                        <!-- Container do iframe responsivo -->
+                        <div
+                            class="relative w-full pb-[56.25%] rounded-2xl overflow-hidden shadow-2xl border-4 border-brand-light">
+                            <iframe class="absolute top-0 left-0 w-full h-full"
+                                src="https://www.youtube.com/embed/M9es-C6y87c"
+                                title="O jeito certo de emagrecer sem desistir" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="depoimentos" class="py-20 bg-brand-light">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="font-serif text-3xl md:text-4xl text-brand-dark mb-4">Histórias Reais, Resultados Reais
+                    </h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Confira o que minhas pacientes dizem sobre a jornada de
+                        transformação e emagrecimento com o meu acompanhamento.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Depoimento 1 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg relative">
+                        <i class="fas fa-quote-left text-4xl text-brand-light absolute top-6 left-6 -z-0"></i>
+                        <div class="relative z-10">
+                            <div class="flex text-yellow-400 text-sm mb-4">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-gray-700 italic mb-6">"Eu, com 58 anos, pós menopausa e depois de ter passado
+                                por várias nutricionistas e programas alimentares, confesso que não tinha mais
+                                esperanças de emagrecer. Mas, aí conheci a Ju Nakaba e a sua metodologia especial para o
+                                Bem Nutrir. De um ..."</p>
+                            <div class="flex items-center gap-3 border-t pt-4">
+                                <div
+                                    class="w-10 h-10 bg-brand-dark rounded-full flex items-center justify-center text-white font-bold">
+                                    C</div>
+                                <div>
+                                    <h4 class="font-bold text-brand-dark">Claudia Lopes de Andrade</h4>
+                                    <span class="text-xs text-gray-500">Paciente 50+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Depoimento 2 -->
+                    <div
+                        class="bg-white p-8 rounded-2xl shadow-lg relative md:-translate-y-4 border-b-4 border-brand-accent">
+                        <i class="fas fa-quote-left text-4xl text-brand-light absolute top-6 left-6 -z-0"></i>
+                        <div class="relative z-10">
+                            <div class="flex text-yellow-400 text-sm mb-4">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-gray-700 italic mb-6">"Fiz acompanhamento com a Ju por mais de um ano e foi
+                                transformador. Minha relação com a alimentação mudou completamente. O trabalho dela vai
+                                muito além de simplesmente dizer o que comer ou não, ela ajuda a entender o corpo..."
+                            </p>
+                            <div class="flex items-center gap-3 border-t pt-4">
+                                <div
+                                    class="w-10 h-10 bg-brand-dark rounded-full flex items-center justify-center text-white font-bold">
+                                    R</div>
+                                <div>
+                                    <h4 class="font-bold text-brand-dark">Raquel Camargo</h4>
+                                    <span class="text-xs text-gray-500">Acompanhamento contínuo</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Depoimento 3 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg relative">
+                        <i class="fas fa-quote-left text-4xl text-brand-light absolute top-6 left-6 -z-0"></i>
+                        <div class="relative z-10">
+                            <div class="flex text-yellow-400 text-sm mb-4">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-gray-700 italic mb-6">"Desde 2013 mudei minha alimentação e consciência para
+                                um novo bem estar na vida física, mental e nutrição. Busquei o apoio da Juliana pois
+                                seguia ela naquela época lendo seus artigos. Comecei a entrar na..."</p>
+                            <div class="flex items-center gap-3 border-t pt-4">
+                                <div
+                                    class="w-10 h-10 bg-brand-dark rounded-full flex items-center justify-center text-white font-bold">
+                                    CM</div>
+                                <div>
+                                    <h4 class="font-bold text-brand-dark">CARLA MARIA Pimentel</h4>
+                                    <span class="text-xs text-gray-500">Transformação de vida</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conteúdo / Instagram Vibe -->
+        <section class="py-20 bg-white border-t border-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-10">
+                    <div>
+                        <h2 class="font-serif text-3xl md:text-4xl text-brand-dark mb-2">Informação que transforma</h2>
+                        <p class="text-gray-600">Acompanhe dicas diárias sobre menopausa, metabolismo e alimentação
+                            real.</p>
+                    </div>
+                    <a href="https://www.instagram.com/ju.nakabanutri/" target="_blank"
+                        class="hidden md:inline-flex items-center gap-2 font-medium text-brand-dark hover:text-brand-accent transition">
+                        Ver mais no Instagram <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Grid simulando o feed focado nos temas dela -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    
+                    <!-- Card 1 -->
+                    <a href="https://www.instagram.com/ju.nakabanutri/" target="_blank" class="block relative aspect-[4/5] bg-gray-200 rounded-xl overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Opções de Jantar Saudável"
+                            onerror="this.src='https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'"
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/40 flex items-center justify-center p-4 text-center">
+                            <h3 class="text-white font-bold text-lg leading-tight">Carboidrato à noite vira gordura?
+                            </h3>
+                        </div>
+                        <div class="absolute top-2 right-2 bg-white/20 backdrop-blur rounded-full p-1"><i
+                                class="fas fa-play text-white text-xs px-1"></i></div>
+                    </a>
+                    
+                    <!-- Card 2 -->
+                    <a href="https://www.instagram.com/ju.nakabanutri/" target="_blank" class="block relative aspect-[4/5] bg-gray-200 rounded-xl overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Mulher 40+"
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/40 flex items-center justify-center p-4 text-center">
+                            <h3 class="text-white font-bold text-lg leading-tight">O erro que faz a mulher 40+ desistir
+                                do emagrecimento</h3>
+                        </div>
+                        <div class="absolute top-2 right-2 bg-white/20 backdrop-blur rounded-full p-1"><i
+                                class="fas fa-play text-white text-xs px-1"></i></div>
+                    </a>
+                    
+                    <!-- Card 3 (NOVO PADRÃO: Mulher Madura Saudável) -->
+                    <a href="https://www.instagram.com/ju.nakabanutri/" target="_blank" class="block relative aspect-[4/5] bg-gray-200 rounded-xl overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Mulher de 50 anos saudável"
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/50 flex items-center justify-center p-4 text-center">
+                            <h3 class="text-white font-serif text-xl leading-tight">As regras do emagrecimento mudam após os 40 anos.</h3>
+                        </div>
+                        <div class="absolute top-2 right-2 bg-white/20 backdrop-blur rounded-full p-1"><i
+                                class="fas fa-play text-white text-xs px-1"></i></div>
+                    </a>
+                    
+                    <!-- Card 4 (NOVO PADRÃO: Jantar Saudável Elegante) -->
+                    <a href="https://www.instagram.com/ju.nakabanutri/" target="_blank" class="block relative aspect-[4/5] bg-gray-200 rounded-xl overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Jantar leve de salmão com vegetais"
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/40 flex items-center justify-center p-4 text-center">
+                            <h3 class="text-white font-bold text-lg leading-tight">Opções de jantar com menos de 400
+                                kcal</h3>
+                        </div>
+                        <div class="absolute top-2 right-2 bg-white/20 backdrop-blur rounded-full p-1"><i
+                                class="fas fa-play text-white text-xs px-1"></i></div>
+                    </a>
+
+                </div>
+                <div class="mt-6 text-center md:hidden">
+                    <a href="https://www.instagram.com/ju.nakabanutri/" target="_blank"
+                        class="inline-flex items-center gap-2 font-medium text-brand-dark hover:text-brand-accent transition">
+                        Siga no Instagram <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-16 bg-brand-accent/20">
+            <div class="max-w-4xl mx-auto px-4 text-center">
+                <h2 class="font-serif text-3xl md:text-4xl text-brand-dark mb-6">Pronta para reescrever sua história com
+                    a balança?</h2>
+                <p class="text-lg text-gray-700 mb-8">Dê o primeiro passo para um emagrecimento leve, sem proibições
+                    extremas e focado na sua saúde hormonal.</p>
+                <a href="https://wa.me/5531999256643" target="_blank"
+                    class="inline-block bg-brand-dark text-white px-10 py-4 rounded-full text-lg font-bold hover:bg-emerald-900 transition shadow-xl transform hover:-translate-y-1">
+                    Quero Agendar Minha Consulta
+                </a>
+            </div>
+        </section>
+
+        <!-- Contato e Localização -->
+        <section id="contato" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row gap-12">
+                    <!-- Infos -->
+                    <div class="w-full lg:w-1/3 space-y-8">
+                        <div>
+                            <h2 class="font-serif text-3xl text-brand-dark mb-6">Contato & Localização</h2>
+                            <p class="text-gray-600 mb-8">Atendimento presencial em Belo Horizonte e online para todo o
+                                mundo.</p>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 bg-brand-light rounded-full flex items-center justify-center flex-shrink-0 text-brand-dark">
+                                <i class="fas fa-map-marker-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Endereço</h4>
+                                <p class="text-gray-600">Av. Prudente de Morais, 901<br>Cidade Jardim, Belo Horizonte -
+                                    MG<br>CEP: 30350-143</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 bg-brand-light rounded-full flex items-center justify-center flex-shrink-0 text-brand-dark">
+                                <i class="fab fa-whatsapp text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">WhatsApp</h4>
+                                <a href="https://wa.me/5531999256643" class="text-gray-600 hover:text-brand-accent">(31)
+                                    99925-6643</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 bg-brand-light rounded-full flex items-center justify-center flex-shrink-0 text-brand-dark">
+                                <i class="far fa-clock text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1">Horário de Atendimento</h4>
+                                <p class="text-gray-600 text-sm leading-relaxed">
+                                    Segunda: 13:00 às 18:30<br>
+                                    Ter a Qui: 08:00 às 18:30<br>
+                                    Sexta: 08:00 às 11:30<br>
+                                    Sáb e Dom: Fechado
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mapa -->
+                    <div class="w-full lg:w-2/3 h-[400px] rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3750.609117621935!2d-43.95041088508544!3d-19.944021186595566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6977f35f34bb7%3A0x136cd4f2287c7ff!2sJu%20Nakaba%E2%80%93%20Nutri%C3%A7%C3%A3o%2040%2B%20em%20Belo%20Horizonte!5e0!3m2!1spt-BR!2sbr!4v1686612000000!5m2!1spt-BR!2sbr"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-gray-300 py-12 border-t border-emerald-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+
+                <div class="text-center md:text-left">
+                    <div class="font-serif text-2xl text-white font-semibold mb-2">Ju Nakaba</div>
+                    <p class="text-sm text-gray-400">Nutrição especializada para mulheres 40+</p>
+                </div>
+
+                <div class="flex space-x-6">
+                    <a href="https://www.instagram.com/ju.nakabanutri/" target="_blank"
+                        class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-accent hover:text-white transition-all text-white">
+                        <i class="fab fa-instagram text-xl"></i>
+                        <span class="sr-only">Instagram</span>
+                    </a>
+                    <a href="https://wa.me/5531999256643" target="_blank"
+                        class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-accent hover:text-white transition-all text-white">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                        <span class="sr-only">WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-white/10 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+                <p>&copy; 2026 Ju Nakaba Nutrição. Todos os direitos reservados.</p>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão WhatsApp Flutuante -->
+    <a href="https://wa.me/5531999256643?text=Olá,%20acessei%20o%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20as%20consultas."
+        target="_blank"
+        class="whatsapp-float fixed bottom-6 right-6 w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center text-3xl z-50 hover:bg-[#20ba56] transition-colors focus:outline-none focus:ring-4 focus:ring-green-300"
+        aria-label="Falar no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script>
+        // Menu Mobile Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const links = document.querySelectorAll('.mobile-link');
+        const icon = btn.querySelector('i');
+
+        function toggleMenu() {
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        }
+
+        btn.addEventListener('click', toggleMenu);
+
+        // Fecha o menu ao clicar em um link
+        links.forEach(link => {
+            link.addEventListener('click', toggleMenu);
+        });
+
+        // Efeito blur no header ao scrollar
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 10) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body>
+
+</html>
